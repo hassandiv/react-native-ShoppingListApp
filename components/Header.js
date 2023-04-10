@@ -1,14 +1,18 @@
-import * as React from 'react';
-
+import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <View style={styles.header}>
-      <Text style={styles.paragraph}>Hello world!</Text>
+      <Text style={styles.paragraph}>{title}</Text>
     </View>
   );
 };
+
+//or below as default props for the title
+// Header.defaultProps = {
+//   title: "Shopping List ..."
+// }
 
 const styles = StyleSheet.create({
   header: {
